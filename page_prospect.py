@@ -33,6 +33,20 @@ load_fichierSauvegarde3 = open("shap_model_data_X_test","rb")
 shap_values_2 = pickle.load(load_fichierSauvegarde3)
 load_fichierSauvegarde3.close()
 
+#Utilisation d'un fonction pour comparer un individu au reste de la population
+def compare_client(data_work, data_list_result):
+    data_num = data_work.select_dtypes(['int64','float64'])
+    data_num_prospect = data_list_result.select_dtypes(['int64','float64'])
+    i = 0
+    for data_work in data_num:
+        #Première ligne pour vérifier la valeur de l'individu
+        #st.write(data_num_client.iloc[0, i])
+        fig = plt.figure(figsize=(20, 5))
+        sns.boxplot(x=data_num[data_work])
+        plt.axvline(data_num_prospect.iloc[0, i], color='red', label='Individu', linewidth=4)
+        st.pyplot(fig)
+        i = i + 1
+
 #Utilisation d'une fonction pour définir la page prospect
 #Création d'un formulaire à compléter
 def page_p (data_work, data_target, data_complete) :
@@ -144,6 +158,8 @@ def page_p (data_work, data_target, data_complete) :
         
         if pred == 0 :
             st.text("Les données fournies permettent d'émettre un avis favorable à la demande de prêt.")
+            st.text("Positionnement des caractéristiques du prospect vis à vis du reste de la clientèle :")
+            compare_client(data_work, data_list_result)
 
         elif pred == 1 :
             st.text("Les données fournies ne permettent pas d'émettre un avis favorable à la demande de prêt.")
@@ -158,6 +174,8 @@ def page_p (data_work, data_target, data_complete) :
             fig = shap.plots.bar(shap_values[0])  
             plt.savefig('shap_report_P7.png', bbox_inches='tight')      
             st.image('shap_report_P7.png')
+            st.text("Positionnement des caractéristiques du prospect vis à vis du reste de la clientèle :")
+            compare_client(data_work, data_list_result)
 
         else :
             st.text("Error")
