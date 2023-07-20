@@ -195,4 +195,4 @@ def client_description():
 
 if __name__ == '__main__':
     unittest.main()
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="20.105.232.31", port=8080)
