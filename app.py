@@ -195,4 +195,5 @@ def client_description():
 
 if __name__ == '__main__':
     unittest.main()
-    app.run(host="20.105.232.31", port=8080)
+    app.run(https://projet7bboyer.azurewebsites.net/)
+    #app.run(host="20.105.232.31", port=8080)
