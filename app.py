@@ -197,4 +197,5 @@ if __name__ == '__main__':
     unittest.main()
     #app.run(https://projet7bboyer.azurewebsites.net/)
     #app.run(host="20.105.232.31", port=8080)
-    app.run(host="0.0.0.0", port=8080)
+    #app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=5000)
