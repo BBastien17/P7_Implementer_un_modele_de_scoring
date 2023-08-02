@@ -33,7 +33,7 @@ print(data_work_complet.head())
 data_target_complet = pd.read_csv("C:/Users/Bastien/Projet_7/data_target.csv")
 
 
-#Fonction pour calculer le score prédictproba du client
+#Fonction pour calculer le score prédictproba du client.
 def calc_score_predictproba (ref_client, data_work_complet):
     #Création d'un dataframe avec les information du client sélectionné :
     #data_work_client = pd.DataFrame(data_work_complet,index=[ref_client])
