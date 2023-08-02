@@ -197,7 +197,12 @@ if __name__ == '__main__':
     unittest.main()
     #app.run(https://projet7bboyer.azurewebsites.net/)
     #app.run(host="20.105.232.31", port=8080)
+
+    #Pour simulation en local
     #app.run(host="0.0.0.0", port=8080)
+
     #app.run(host="0.0.0.0", port=5000)
     #app.run()
-    app.run(host='0.0.0.0', port=80, debug=True)
+    #app.run(host='0.0.0.0', port=80, debug=True)
+    port = os.environ.get("Port", 5000)
+    app.run(debug=False, host="0.0.0.0", port=port)
