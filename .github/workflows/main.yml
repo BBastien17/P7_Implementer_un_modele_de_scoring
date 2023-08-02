@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.14 # This is the action
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "YOUR APP's NAME" #Must be unique in Heroku
-          heroku_email: "YOUR EMAIL"
+          heroku_api_key: ${{secrets.74c1112c-d16f-446c-9b6f-ee3315b7ec8b}}
+          heroku_app_name: "p7app" #Must be unique in Heroku
+          heroku_email: "boyer_bastien@msn.com"
           usedocker: true
