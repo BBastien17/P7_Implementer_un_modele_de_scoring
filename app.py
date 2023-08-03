@@ -27,13 +27,13 @@ from unittest.mock import Mock
 #Importation du modèle mlflow
 #path = 'Projet_7/'
 #model = mlflow.sklearn.load_model('xgb_model_final/')
-model = mlflow.sklearn.load_model("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/tree/02846cde70faec8112fc7a9f407882a6210886f9/xgb_model_final")
+##model = mlflow.sklearn.load_model("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/tree/02846cde70faec8112fc7a9f407882a6210886f9/xgb_model_final")
 #Importation des infos clients
 #data_work_complet = pd.read_csv("C:/Users/Bastien/Projet_7/data_work.csv")
-data_work_complet = pd.read_csv("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/blob/02846cde70faec8112fc7a9f407882a6210886f9/data_work.csv")
-print(data_work_complet.head())
+##data_work_complet = pd.read_csv("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/blob/02846cde70faec8112fc7a9f407882a6210886f9/data_work.csv")
+##print(data_work_complet.head())
 #data_target_complet = pd.read_csv("C:/Users/Bastien/Projet_7/data_target.csv")
-data_target_complet = pd.read_csv("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/blob/02846cde70faec8112fc7a9f407882a6210886f9/data_target.csv")
+##data_target_complet = pd.read_csv("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/blob/02846cde70faec8112fc7a9f407882a6210886f9/data_target.csv")
 
 
 #Fonction pour calculer le score prédictproba du client.
@@ -211,7 +211,7 @@ if __name__ == '__main__':
     #app.run(host="0.0.0.0", port=5000)
     #app.run()
     #app.run(host='0.0.0.0', port=80, debug=True)
-
+    print("connexion OK")
     #Pour le déploiement en ligne
     port = os.environ.get("Port", 5000)
     app.run(debug=False, host="0.0.0.0", port=port)
