@@ -42,20 +42,24 @@ def request_prediction(model_uri, data):
 page = st.sidebar.selectbox('Page Navigation', ["Prospects", "Clients"])
 st.sidebar.markdown("""---""")
 st.sidebar.write("Created by Bastien B")
-st.sidebar.image("images/logo.png", width=100)
+#st.sidebar.image("images/logo.png", width=100)
+st.sidebar.image("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/blob/67f1e5e3069cb689852317b5cef495492e04b8fa/images/logo.png", width=100)
 
 path = 'Projet_7/'
 
 #Import des données clients
-data_work = pd.read_csv("C:/Users/Bastien/Projet_7/data_work.csv")
-data_target = pd.read_csv("C:/Users/Bastien/Projet_7/data_target.csv")
+#data_work = pd.read_csv("C:/Users/Bastien/Projet_7/data_work.csv")
+data_work = pd.read_csv("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/blob/67f1e5e3069cb689852317b5cef495492e04b8fa/data_work.csv")
+#data_target = pd.read_csv("C:/Users/Bastien/Projet_7/data_target.csv")
+data_target = pd.read_csv("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/blob/67f1e5e3069cb689852317b5cef495492e04b8fa/data_target.csv")
 data_complete = data_work.copy()
 data_complete["Target"] = data_target
 
 #Import du modèle XGBClassifier
 xgb = XGBClassifier()
 #model = load_model('xgb_model_final/model')
-model = mlflow.sklearn.load_model('xgb_model_final/')
+#model = mlflow.sklearn.load_model('xgb_model_final/')
+model = mlflow.sklearn.load_model("https://github.com/BBastien17/P7_Implementer_un_modele_de_scoring/tree/67f1e5e3069cb689852317b5cef495492e04b8fa/xgb_model_final/")
 #load_joblib_model = joblib.load('pipeline_scoring.joblib')
 #st.write(load_joblib_model)
 #st.write("Temp")
